@@ -25,3 +25,34 @@ Este projeto é uma aplicação Java Spring desenvolvido como trabalho final par
 - **Spring Web**
 - **Spring Security**
 - **Jakarta Persistence API (JPA)**
+### Padrões de Projeto Utilizados
+
+---
+
+Este projeto utiliza vários padrões de projeto para garantir um código limpo, manutenível e escalável. Abaixo estão os principais padrões aplicados:
+
+#### Padrão MVC (Model-View-Controller)
+
+O padrão MVC é utilizado para separar a lógica de negócio, a lógica de apresentação e a lógica de controle. 
+
+- **Model:** Representa os dados da aplicação e a lógica de negócios, encapsulados nas entidades JPA.
+- **View:** Não aplicável diretamente, mas o Spring Boot facilita a criação de APIs RESTful que podem ser consumidas por diferentes tipos de clientes.
+- **Controller:** Classes responsáveis por receber as requisições HTTP, processá-las e retornar as respostas apropriadas.
+
+#### Padrão DAO (Data Access Object)
+
+O padrão DAO é aplicado através dos repositórios JPA. Ele abstrai e encapsula o acesso aos dados, fornecendo uma interface para realizar operações de banco de dados.
+
+- **Repository:** Interfaces que estendem `JpaRepository`, fornecendo métodos prontos para operações CRUD e permitindo a definição de consultas personalizadas.
+
+#### Padrão Service
+
+O padrão Service é utilizado para encapsular a lógica de negócios, separando-a da camada de controle e da camada de acesso a dados.
+
+- **Service:** Classes que contêm métodos de negócio, coordenando operações entre repositórios e controladores.
+
+#### Padrão Singleton
+
+O padrão Singleton é aplicado na configuração de segurança e em outras configurações gerais do Spring, garantindo que apenas uma instância da configuração seja criada.
+
+- **Config:** Classes de configuração do Spring, anotadas com `@Configuration`, são geridas como singletons pelo contêiner de injeção de dependências do Spring.
