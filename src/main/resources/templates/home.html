@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Centraliza todo o conteúdo horizontalmente */
+            align-items: center; /* Centraliza todo o conteúdo verticalmente */
+            height: 100vh; /* Altura total da viewport */
+        }
+        #sidebar {
+            min-width: 250px;
+            max-width: 250px;
+            background: #343a40;
+            color: #fff;
+            min-height: 100vh;
+        }
+        #sidebar .nav-link {
+            color: #fff;
+        }
+        #sidebar .nav-link:hover {
+            background: #495057;
+        }
+    </style>
+</head>
+<body>
+<div id="sidebar" class="d-flex flex-column p-3">
+    <h2 class="text-center">Menu</h2>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="#funcionariosSubmenu" data-toggle="collapse" class="nav-link">Funcionários</a>
+            <ul class="collapse list-unstyled" id="funcionariosSubmenu">
+                <li><a href="/employees/new" class="nav-link">Cadastrar Novo</a></li>
+                <li><a href="/employees/list" class="nav-link">Listar Cadastrados</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="#diariasSubmenu" data-toggle="collapse" class="nav-link">Diárias</a>
+            <ul class="collapse list-unstyled" id="diariasSubmenu">
+                <li><a href="/dailyLogs/new" class="nav-link">Cadastrar Nova</a></li>
+                <li><a href="/dailyLogs/list" class="nav-link">Listar Diárias</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="mt-auto text-center">
+        <small>&copy; 2024 Felipe Gabrielli</small>
+    </div>
+</div>
+
+
+<div id="content" class="container">
+    <div class="card text-center">
+        <div class="card-header">
+            Acompanhamento de Safra
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">H O M E</h5>
+        </div>
+        <div class="card-footer text-muted">
+            &copy; 2024
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

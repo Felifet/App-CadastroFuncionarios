@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body style="background-color: #f8f9fa;">
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center" style="height: 100vh;">
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Login</h2>
+                    <form th:action="@{/login}" method="post">
+                        <div th:if="${loginError}" class="alert alert-danger">
+                            Usuário ou senha inválidos.
+                        </div>
+
+                        <div class="form-group">
+                            <label for="usuario">Usuário</label>
+                            <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuário">
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<!-- Scripts do Bootstrap no final para carregamento mais rápido -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyFVnF+qnBVC7J3p1PskFVk5+PNIJl+pq" crossorigin="anonymous"></script>
+</html>
